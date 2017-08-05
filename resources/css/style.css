@@ -1,8 +1,10 @@
 /**/
 html {
   font-size: 18px;
-  line-height: 1.4;
   font-family: Helvetica;
+}
+p h2 {
+  line-height: 1.4;
 }
 .frame {
   display: flex;
@@ -17,19 +19,232 @@ html {
   display: flex;
 }
 /**/
+.background-image-container {
+  height: 30rem;
+  overflow: hidden;
+  position: fixed;
+  z-index: -10;
+}
+.background-image {
+  width: 100%;
+  min-width: 1700px;
+}
+.background-image-spacing {
+  height: 31rem;
+}
+/**/
 header {
+  margin-top: 1rem;
 }
 header .container {
   background-color: cadetblue;
-  color: white;
+  justify-content: space-between;
 }
 header .item {
   align-items: center;
+  margin: 0 1rem 0 2rem;
 }
 header img {
   height: 1.5rem;
-  margin: 0 1rem 0 2rem;
+}
+header p {
+color: white;
+margin: 1rem;
+}
+header h2 {
+  display: none;
+  color: white;
+  margin: 1rem;
 }
 /**/
-.background-image {
+.slogan .container {
+  position: relative;
+  justify-content: flex-end;
+  left: 2rem;
+}
+.slogan .item {
+  margin: 10rem 0 12rem;
+  background-color: white;
+}
+.slogan h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 1.5rem 5rem 1.5rem 5rem;
+  text-transform: uppercase;
+}
+/**/
+main {
+  background-color: white;
+}
+main .frame {
+  margin-top: 3rem;
+}
+main > .container {
+  flex-direction: column;
+}
+/**/
+.services .container {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 3rem;
+}
+.services .item {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 0 3rem 0 3rem;
+  width: 5rem;
+  height: 8rem;
+}
+.services img {
+  width: 5rem;
+}
+.services .main-services-item-img-paper {
+  height: auto;
+  width: 3.5rem;
+}
+/**/
+.information {
+  margin-bottom: 5rem;
+}
+.information .item {
+  display: block;
+  width: 35%;
+  margin: 5%;
+}
+.information h1 {
+  font-weight: bold;
+  color: white;
+  background-color: cadetblue;
+  padding: 0.5rem 1.25rem 0.5rem 1.25rem;
+  margin-bottom: 1rem;
+  width: 10rem;
+}
+/**/
+footer {
+  background-color: azure;
+}
+footer img {
+  margin: 4rem 1rem 4rem 4rem;
+  height: 1.5rem;
+}
+footer .container {
+  align-items: center;
+}
+@media only screen and (max-width: 1024px) {
+  /**/
+  html {
+    font-size: 17px;
+  }
+  .container {
+    width: 100%;
+  }
+  /**/
+  .background-image {
+    position: relative;
+    right: 14rem;
+    min-width: 1500px;
+  }
+  /**/
+  header {
+    margin: 0;
+  }
+  /**/
+  .slogan {
+    position: relative;
+    right: 2rem;
+  }
+  .slogan .container {
+    left: 0;
+  }
+  .slogan h1 {
+    font-size: 1.33rem;
+    margin: 0.75rem 4rem;
+  }
+}
+@media only screen and (max-width: 580px) {
+  /**/
+  html {
+    font-size: 18px;
+  }
+  /**/
+  .background-image {
+    min-width: 1600px;
+  }
+  /**/
+  header h2 {
+    display: block;
+  }
+  .menu p {
+    display: none;
+  }
+  /**/
+  .slogan {
+    position: static;
+  }
+  .slogan .container {
+    position: static;
+    justify-content: center;
+  }
+  .slogan .item {
+    position: relative;
+    width: 100%;
+    top: 10rem;
+    margin: 10rem 0 12rem;
+    background-color: white;
+  }
+  .slogan h1 {
+    font-size: 1rem;
+    margin: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+  /**/
+  main .frame {
+    margin-top: 3.77rem;
+  }
+  /**/
+  .services .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .services .item {
+    margin-bottom: 3.77rem;
+  }
+  .services p {
+    font-size: 0.77rem;
+  }
+  /**/
+  .information {
+    margin-bottom: 0;
+  }
+  .information .container {
+    flex-direction: column;
+    align-items: center
+  }
+  .information .item {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+  .information h1 {
+    text-align: center;
+    width: 100%;
+  }
+  .information p {
+    font-size: 0.77rem;
+    margin: 0.5rem;
+  }
+  /**/
+  footer p {
+    display: none;
+  }
+  footer .container {
+    justify-content: center;
+  }
+  footer img {
+    margin: 4rem 0 4rem 0;
+    height: 1.5rem;
+  }
 }
